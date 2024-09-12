@@ -1,0 +1,106 @@
+/* INSERT SITE URL HOST HERE */
+
+INVERT
+/* Things that need simple invert go in here. */
+
+/* Icons on Top Navbar */
+div:not(.GL4OBY5BCRG) > div.GL4OBY5BLQG:not(.GL4OBY5BJSG, .GL4OBY5BJRG) div.GL4OBY5BMRG > div > svg
+/* Up arrow on top navbar */
+div.GL4OBY5BJDL > div > svg:not(:hover)
+/* Stopwatch iCons */
+div.GL4OBY5BJCH svg
+/* Pod Collapse Arrows */
+div.GL4OBY5BOGH div.GL4OBY5BMUD > div > svg
+/* Some Dropdowns such as Site/Contact/etc. */
+div:not(.GL4OBY5BDTH) div.GL4OBY5BNPI > div > svg
+/* Icons below ticket owner dropdown. */
+div.GL4OBY5BCLI > svg
+/* Resource Scheduler Action/Status Icons */
+/* div.GL4OBY5BJPD svg */
+div.GL4OBY5BJPD img
+/* Row action items for ticket bundler */
+tr.GL4OBY5BFJI:not(.GL4OBY5BKJI) div.GL4OBY5BFWG:not(.GL4OBY5BEYG) div.GL4OBY5BGXG svg
+/* Trash can on resources */
+tr.GL4OBY5BNQD div.GL4OBY5BFWG:not(.GL4OBY5BEYG) div.GL4OBY5BGXG svg
+/* Show More down arrow in Resources/Done list. */
+div.GL4OBY5BGJF div div svg
+/* Paperclip on Config list */
+td.GL4OBY5BJEI svg
+/* Filter icon on top right below navbar */
+div.GL4OBY5BKCL svg
+/* ">"s in breadcrumbs just below top navbar */
+table.GL4OBY5BHCL img
+/* Very specific Map Icon on Address 1 */
+div.GL4OBY5BBFH > table.GL4OBY5BLSM > tbody > tr > td > div.cwsvg
+/* Map Icons on shipping pod */
+div.GL4OBY5BNKI svg
+/* Time tab, time entry collapser arrows */
+tr.GL4OBY5BGEG:not(.GL4OBY5BLEG, .GL4OBY5BEEG) div.GL4OBY5BGAG svg
+
+/* Time Entry window */
+/* Tool bar icons */
+div.GL0RNONNWG:not(.GL0RNONLFB) div.GL0RNONPCE:not(.GL0RNONNEE) div.GL0RNONAEE svg
+/* Time icons above ticket notes that you click to enter current time. */
+table.GL0RNONFVI div.GL0RNONPCE:not(.GL0RNONNEE) div.GL0RNONAEE svg
+/* Charge To collapsible arrows, along with some of the dropdowns */
+div.GL0RNONAGF:not(.GL0RNONHFF) div.GL0RNONNBG svg
+/* Section Collapsers */
+div.GL0RNONAHB svg
+/* Standard Note Dropdown arrow */
+div.CwTriggerField-trigger svg
+/* Icons in the dropdown for Charge To */
+div.GL0RNONDLG:not(.GL0RNONHLG) div svg
+/* The lock icon that appears when you are adding multiple time entries at once. */
+div.GL0RNONC-E table div svg
+
+/* Gear at end of tabs for ticket/service board/today/etc. */
+li.GL4OBY5BETI:not(.GL4OBY5BDUI) > span > div > svg
+
+/* window controls on upper right when viewing an image / "X" closer. */
+div.cw-gxt-wnd-cls > svg
+
+CSS
+/* More advanced tweaks such as image recoloring etc. */
+
+/* Login screen cw logo */
+/* Hue/Bright/Sat tuned for CW blue. */
+div.login-container img {
+    filter: invert(1) hue-rotate(200deg) brightness(2.2) saturate(0.7);
+}
+/* Company logo inverted, but hue corrected. */
+img.GL4OBY5BKDL {
+    filter: invert(.85) hue-rotate(180deg) !important;
+}
+/* Fixes some issues with dropdowns */
+.GL4OBY5BDTH .GL4OBY5BKTH .cwsvg {
+    fill: unset;
+}
+/* Checkboxes on ticket list and on the header */
+.GL4OBY5BODI,
+.GL4OBY5BMDI {
+    filter: invert(.85) grayscale(1) hue-rotate(180deg);
+}
+/* Make tickets marked as "Customer Updated" yellow instead of just bold. */
+/* Bolded white text on black is not as easy to notice in light mode. */
+a.boldMultilineClickable,
+a.boldMultilineClickable:hover,
+a.boldMultilineClickable:visited {
+    color: yellow !important;
+}
+/* Make underlines in ticket lists more subtle */
+.multilineClickable,
+.multilineClickable:link {
+    text-decoration-color: rgba(198,195,191,0.5) !important;
+}
+div.GL4OBY5BKF .cwsvg {    fill: #fff;
+}
+
+/* Today page / CW Manage Logo */
+div.cwlogo {
+    filter: invert(1) hue-rotate(200deg) brightness(2.2) saturate(0.7);
+}
+/* Today page / (?) on right side and Lock Icon, and second line is activities calendar icon. */
+table.bannerborderright img,
+td.todaysActiviesHeader img {
+    filter: brightness(2.5) hue-rotate(20deg);
+}
