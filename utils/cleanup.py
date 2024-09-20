@@ -1,6 +1,13 @@
+import sys
+
+if __name__ == "__main__":
+    print("Usage: <input file> <output file>")
+    print("Output file will be overwritten.")
+    exit(1)
+
 # VARIABLES
-inputFile = "input.css"
-outputFile = "output.conf"
+inputFile = sys.argv[1]
+outputFile = sys.argv[2]
 
 
 # METRICS
@@ -11,8 +18,9 @@ linesUncommented = 0
 
 
 # Open our files
-print("Opening Files...")
+print(f"Opening input file {inputFile}...")
 input = open(inputFile,"r")
+print(f"Opening output file {outputFile}...")
 output = open(outputFile, "w")
 
 
