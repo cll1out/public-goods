@@ -38,3 +38,4 @@ jobs:
         git add ./utils/output.conf
         git commit -m "Adding generated file by Github Workflow"
         git push
+        
