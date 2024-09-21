@@ -20,6 +20,11 @@ jobs:
     steps:
     - name: Getting source
       uses: actions/checkout@v4
+      with:
+        sparse-checkout: |
+          utils
+        ref: testing
+
     
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
@@ -37,4 +42,4 @@ jobs:
         
         git add ./utils/output.conf
         git commit -m "Adding generated file by Github Workflow"
-        git push
+        git push origin testing
