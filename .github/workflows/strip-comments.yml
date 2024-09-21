@@ -28,4 +28,4 @@ jobs:
         
     - name: Run Python Script
       run: |
-        python ./strip-comments.py
+        python ./utils/cleanup.py ./utils/input.css ./utils/output.conf
