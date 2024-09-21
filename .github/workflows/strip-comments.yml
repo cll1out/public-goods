@@ -26,6 +26,15 @@ jobs:
       with:
         python-version: "3.10"
         
-    - name: Run Python Script
+    - name: Strip Comments
       run: |
         python ./utils/cleanup.py ./utils/input.css ./utils/output.conf
+
+    - name: Upload back to repo
+      run: |
+        git config user.name ${{ secrets.GH_USER }}
+        git config user.email ${{ secrets.GH_MAIL }}
+        
+        git add ./utils/output.conf
+        git commit -m "Adding generated file by Github Workflow"
+        git push
