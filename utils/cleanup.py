@@ -1,6 +1,6 @@
 import sys
 
-if __name__ == "__main__":
+if len(sys.argv) != 3:
     print("Usage: <input file> <output file>")
     print("Output file will be overwritten.")
     exit(1)
