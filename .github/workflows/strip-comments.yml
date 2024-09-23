@@ -11,6 +11,10 @@ on:
   pull_request:
     branches: [ "pre-release-testing" ]
 
+env:
+  SOURCE_FILE: 'dark-reader/tweaks/connectwise-psa.css'
+  DEST_FILE: 'dark-reader/tweaks/connectwise-psa.conf'
+
 permissions:
   contents: write
 
@@ -35,7 +39,7 @@ jobs:
         
     - name: Strip Comments
       run: |
-        python ./utils/cleanup.py ./dark-reader/tweaks/connectwise-psa.css ./dark-reader/tweaks/connectwise-psa.conf
+        python ./utils/cleanup.py ./$SOURCE_FILE ./$DEST_FILE
 
     - name: Upload back to repo
       run: |

@@ -11,6 +11,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  SOURCE_FILE: 'your-input/file-goes-here.in'
+  DEST_FILE: 'your-output/file-goes-here.out'
+
 permissions:
   contents: write
 
@@ -25,17 +29,17 @@ jobs:
       with:
         sparse-checkout: |
           utils
-        ref: testing
+        ref: pre-release-testing
 
 
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
-        
+
     - name: Strip Comments
       run: |
-        python ./utils/cleanup.py ./utils/input.css ./utils/output.conf
+        python ./utils/cleanup.py ./$SOURCE_FILE ./$DEST_FILE
 
     - name: Upload back to repo
       run: |
@@ -44,4 +48,4 @@ jobs:
         
         git add ./utils/output.conf
         git commit -m "Adding generated file by Github Workflow"
-        git push origin testing
+        git push origin pre-release-testing
