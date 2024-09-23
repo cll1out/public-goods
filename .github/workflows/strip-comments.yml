@@ -35,7 +35,7 @@ jobs:
         
     - name: Strip Comments
       run: |
-        python ./utils/cleanup.py ./utils/input.css ./utils/output.conf
+        python ./utils/cleanup.py ./dark-reader/tweaks/connectwise-psa.css ./dark-reader/tweaks/connectwise-psa.conf
 
     - name: Upload back to repo
       run: |
