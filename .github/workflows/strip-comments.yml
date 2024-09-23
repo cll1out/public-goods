@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "pre-release-testing" ]
     paths:
-      - 'dark-reader/tweaks/connectwise-psa.css'
+      - 'dark-reader-tweaks/connectwise-psa.css'
   pull_request:
     branches: [ "pre-release-testing" ]
 
