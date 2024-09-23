@@ -1,3 +1,5 @@
+# Copy this to /.github/workflows/strip-comments.yml and modify the on: parameters to scope the file you are targeting.
+
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
@@ -5,11 +7,9 @@ name: Strip Comments
 
 on:
   push:
-    branches: [ "pre-release-testing" ]
-    paths:
-      - 'dark-reader/tweaks/connectwise-psa.css'
+    branches: [ "main" ]
   pull_request:
-    branches: [ "pre-release-testing" ]
+    branches: [ "main" ]
 
 permissions:
   contents: write
@@ -25,7 +25,7 @@ jobs:
       with:
         sparse-checkout: |
           utils
-        ref: pre-release-testing
+        ref: testing
 
 
     - name: Set up Python 3.10
@@ -44,4 +44,4 @@ jobs:
         
         git add ./utils/output.conf
         git commit -m "Adding generated file by Github Workflow"
-        git push origin pre-release-testing
+        git push origin testing
