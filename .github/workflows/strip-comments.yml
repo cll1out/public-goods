@@ -24,18 +24,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Get Environment Info for debug
-      run: |
-        pwd
-        ls -alR
-
     - name: Getting source
       uses: actions/checkout@v4
       with:
         sparse-checkout: |
           utils
         ref: pre-release-testing
-
 
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
@@ -54,3 +48,8 @@ jobs:
         git add ./utils/output.conf
         git commit -m "Adding generated file by Github Workflow"
         git push origin pre-release-testing
+
+    - name: Get Environment Info for debug
+      run: |
+        pwd
+        ls -alR
