@@ -51,7 +51,7 @@ jobs:
         git config user.name ${{ secrets.GH_USER }}
         git config user.email ${{ secrets.GH_MAIL }}
         
-        git add ./utils/output.conf
+        git add ./$DEST_FILE
         git commit -m "Adding generated file by Github Workflow"
         git push origin pre-release-testing
 
