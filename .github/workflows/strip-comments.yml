@@ -28,6 +28,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         sparse-checkout: |
+          dark-mode-tweaks
           utils
         ref: pre-release-testing
 
