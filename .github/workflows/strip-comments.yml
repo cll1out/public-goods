@@ -12,8 +12,8 @@ on:
     branches: [ "pre-release-testing" ]
 
 env:
-  SOURCE_FILE: 'dark-reader/tweaks/connectwise-psa.css'
-  DEST_FILE: 'dark-reader/tweaks/connectwise-psa.conf'
+  SOURCE_FILE: 'dark-reader-tweaks/connectwise-psa.css'
+  DEST_FILE: 'dark-reader-tweaks/connectwise-psa.conf'
 
 permissions:
   contents: write
