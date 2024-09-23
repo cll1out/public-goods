@@ -24,6 +24,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Get Environment Info for debug
+      run: |
+        pwd
+        ls -alR
+
     - name: Getting source
       uses: actions/checkout@v4
       with:
